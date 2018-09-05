@@ -20,7 +20,7 @@
 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
-<title>Brushed | Responsive One Page Template</title>   
+<title>Furkan KIYIKCI</title>   
 
 <meta name="description" content="Insert Your Site Description" /> 
 
@@ -165,7 +165,7 @@
                     	<li class="type-work">Type of Work</li>
                           {% for lang in langs %}
 
-                        <li><a href="#filter" data-option-value=".{{ lang }}">{{ lang }}</a></li>
+                        <li><a href="#filter" data-option-value=".{{ lang }}" id="filter">{{ lang }}</a></li>
 
                         {% endfor %}
                     </ul>
@@ -187,7 +187,7 @@
         	                    <div class="image-wrap">
                                     <div class="hover-wrap fancybox" data-fancybox-group="gallery" title="{{ project.name }}" href="{{project.myimage}}">
                             	<!-- Fancybox - Gallery Enabled - Title - Full Image -->
-{#                            	<a class="hover-wrap fancybox" data-fancybox-group="gallery" title="{{ project.name }}" href="{{myimage}}">#}
+{#                            	<a class="hover-wrap fancybox" data-fancybox-group="gallery" title="{{ project.name }}" href="{{myimage}}" width="700" height="600" >#}
                                 	<span class="overlay-img"></span>
                                     <span class="overlay-text-thumb">{{ project.name }}</span>
 
