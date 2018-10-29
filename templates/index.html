@@ -161,7 +161,7 @@
         	<div class="span3">
             	<!-- Filter -->
                 <nav id="options" class="work-nav">
-                    <ul id="filters" class="option-set" data-option-key="filter">
+                    <ul id="filters" class="option-set" data-option-key="filter" data-option-value="Python">
                     	<li class="type-work">Type of Work</li>
                           {% for lang in langs %}
 
@@ -182,19 +182,19 @@
                             {% for project in projects %}
 
 
-                        	<li class="item-thumbs span3 {{ project.language }}">
+                        	<li class="item-thumbs span3 {{ project.lang }}">
 
-        	                    <div class="image-wrap">
-                                    <div class="hover-wrap fancybox" data-fancybox-group="gallery" title="{{ project.name }}" href="{{project.myimage}}">
+        	                    <div class="image-wrap" width="300" height="256">
+                                    <div class="hover-wrap fancybox" style="width="300";height="256";" data-fancybox-group="gallery" title="{{ project.name }}" href="{{project.myimage}}">
                             	<!-- Fancybox - Gallery Enabled - Title - Full Image -->
-{#                            	<a class="hover-wrap fancybox" data-fancybox-group="gallery" title="{{ project.name }}" href="{{myimage}}" width="700" height="600" >#}
-                                	<span class="overlay-img"></span>
+{#                            	<a class="hover-wrap fancybox" data-fancybox-group="gallery" title="{{ project.name }}" href="{{myimage}}" style:{width="300" height="300"} >#}
+                                	<span class="overlay-img" width=600 height=600></span>
                                     <span class="overlay-text-thumb">{{ project.name }}</span>
 
                                     </div>
-{#                                <h4 class="title-description">{{ project.name }}</h4>#}
+                                <h4 class="title-description">{{ project.name }}</h4>
                                 <!-- Thumb Image and Description -->
-                                <img src="{{project.myimage}}" alt="description : {{ project.description }}" width="280" height="256">
+                                <img src="{{project.myimage}}" alt="description : {{ project.description }}" width="700" height="600">
                                 </div>
                             </li>
                             {% endfor %}
@@ -321,10 +321,10 @@ Maps/Location: MapKit (Apple Maps), Core Location, Google Maps. Popular SDKs: Fi
             <div class="span12">
                 <nav id="social">
                     <ul>
-                        <li><a href="https://twitter.com/furkankykc" title="Follow Me on Twitter" target="_blank"><span class="font-icon-social-twitter"></span></a></li>
-                        <li><a href="https://www.facebook.com/furkankykc" title="Follow Me on Facebook" target="_blank"><span class="font-icon-social-facebook"></span></a></li>
-                        <li><a href="https://plus.google.com/+FurkanKıyıkçı" title="Follow Me on Google Plus" target="_blank"><span class="font-icon-social-google-plus"></span></a></li>
-                        <li><a href="http://www.linkedin.com/in/furkankykc" title="Follow Me on LinkedIn" target="_blank"><span class="font-icon-social-linkedin"></span></a></li>
+                        <li style="background-color:#ffb6c1" ><a href="https://twitter.com/furkankykc" title="Follow Me on Twitter" target="_blank"><span class="font-icon-social-twitter"></span></a></li>
+                        <li style="background-color:#FFB6C1" ><a href="https://www.facebook.com/furkankykc" title="Follow Me on Facebook" target="_blank"><span class="font-icon-social-facebook"></span></a></li>
+                        <li style="background-color:#FFB6C1" ><a href="https://plus.google.com/+FurkanKıyıkçı" title="Follow Me on Google Plus" target="_blank"><span class="font-icon-social-google-plus"></span></a></li>
+                        <li style="background-color:#FFB6C1" ><a href="http://www.linkedin.com/in/furkankykc" title="Follow Me on LinkedIn" target="_blank"><span class="font-icon-social-linkedin"></span></a></li>
                     </ul>
                 </nav>
             </div>
@@ -346,7 +346,8 @@ Maps/Location: MapKit (Apple Maps), Core Location, Google Maps. Popular SDKs: Fi
 <!-- End Back to Top -->
 <!-- Js -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.13.0/jquery.min.js"></script> <!-- jQuery Core -->
-<script src="{% static '/js/bootstrap.min.js' %}"></script> <!-- Bootstrap -->
+<script src="
+{% static '/js/bootstrap.min.js' %}"></script> <!-- Bootstrap -->
 <script src="{% static '/js/supersized.3.2.7.min.js' %}"></script> <!-- Slider -->
 <script src="{% static '/js/waypoints.js' %}"></script> <!-- WayPoints -->
 <script src="{% static '/js/waypoints-sticky.js' %}"></script> <!-- Waypoints for Header -->

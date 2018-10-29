@@ -152,7 +152,7 @@ BRUSHED.filter = function (){
 			} else {
 			  // otherwise, apply new options
 			  $container.isotope( options );
-			}
+		}
 			
 			return false;
 		});
@@ -274,7 +274,7 @@ BRUSHED.menu = function(){
 
 BRUSHED.goSection = function(){
 	$('#nextsection').on('click', function(){
-		$target = $($(this).attr('href')).offset().top-30;
+		$target = $($(this).attr('href')).offset().top;
 		
 		$('body, html').animate({scrollTop : $target}, 750, 'easeOutExpo');
 		return false;
