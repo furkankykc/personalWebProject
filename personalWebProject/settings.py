@@ -25,7 +25,7 @@ SECRET_KEY = '(p7dr%h$-e9h!7+g#&3bi9mzbenb@o$_v-8*w^4vq%b7=#jw!6'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['furkankykc.xyz','188.166.75.205','localhost','0.0.0.0','www.furkankykc.xyz','127.0.0.1']
+ALLOWED_HOSTS = ['furkankykc.me','188.166.75.205','localhost','0.0.0.0','www.furkankykc.me','127.0.0.1']
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
