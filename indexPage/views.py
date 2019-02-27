@@ -20,7 +20,7 @@ def saveRepos():
     repo.objects.all().delete()
     for r in go:
         if r.language is not None:
-            instance = repo.objects.create(name=r.name, lang=r.language)
+            instance = repo.objects.create(name=r.name, lang=r.language.replace('#', 's').replace('+', 'p').replace('CSS','Django'))
             print(instance.name,'created ')
             try:
                 picture = urllib.request.urlretrieve(r.get_file_contents("/test-output/picture.png").download_url,"static/img/projects/"+r.name+".png")
@@ -33,14 +33,20 @@ def saveRepos():
                 picture = "static/img/github.png"
                 instance.picture = picture
                 # shutil.copy2("static/img/projects/"+r.name+".png",picture ,follow_symlinks=True)
+
             instance.save()
 
+def refreshDB(request):
+    saveRepos()
+    return runIndex(request)
 
 def runIndex(request):
+    # saveRepos()
     repos = getRepos()
     uniqueLangs = []
     uniqueLangs = ([x.lang.replace('#', 's').replace('+', 'p') for x in repos])
     uniqueLangs = np.unique(uniqueLangs)
+    print(repos)
     print(uniqueLangs)
     uniqueLangs = np.array(uniqueLangs)
     # for repo in repos:

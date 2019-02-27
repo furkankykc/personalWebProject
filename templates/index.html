@@ -167,7 +167,7 @@
                 <!-- Filter -->
                 <nav id="options" class="work-nav">
                     <ul id="filters" class="option-set" data-option-key="filter" data-option-value="Python">
-{#                        <li class="type-work">Type of Work</li>#}
+                        {#                        <li class="type-work">Type of Work</li>#}
                         {% for lang in langs %}
 
                             <li><a href="#filter" data-option-value=".{{ lang }}" id="filter">{{ lang }}</a></li>
@@ -190,17 +190,19 @@
                                 <li class="item-thumbs span3 {{ project.lang }}">
 
                                     <div class="image-wrap">
-                                        <div class="hover-wrap" onclick="location='https://github.com/furkankykc/{{ project.name }}'" data-fancybox-group="gallery"
+                                        <div class="hover-wrap"
+                                             onclick="location='https://github.com/furkankykc/{{ project.name }}'"
+                                             data-fancybox-group="gallery"
                                              title="{{ project.name }}">
                                             <!-- Fancybox - Gallery Enabled - Title - Full Image -->
                                             {#                                                                    	<a class="hover-wrap fancybox" data-fancybox-group="gallery" title="{{ project.name }}" href="{{picture}}" style:{width="300" height="300"} >#}
-                                            <span class="overlay-img"  ></span>
-                                            <span class="overlay-text-thumb"  >{{ project.name }}</span>
+                                            <span class="overlay-img"></span>
+                                            <span class="overlay-text-thumb">{{ project.name }}</span>
 
                                         </div>
-                                        <h4 class="title-description"  >{{ project.name }}</h4>
+                                        <h4 class="title-description">{{ project.name }}</h4>
                                         <!-- Thumb Image and Description -->
-                                        <img  src="{{ project.picture }}" alt="description : {{ project.description }}"
+                                        <img src="{{ project.picture }}" alt="description : {{ project.description }}"
                                              width="700" height="600">
                                     </div>
                                 </li>
@@ -322,77 +324,81 @@
             <p class="profile-name" align="center">I graduated Inonu University Computer Engineering in 2018.</br>I've
                 done some jobs for several companies.
                 <br>I've 3 years experienced in java and python.I love starting new projects and learning some new
-                things. </p>
+                things.</br>
+            <a href="mailto:furkanfbr@gmail.com"> Contact with me : furkanfbr@gmail.com</a>
+
+            </p>
         </div>
     </div>
-    <!-- End About Section -->
+</div>
+<!-- End About Section -->
 
-    <!-- Socialize -->
-    <div id="social-area" class="page">
-        <div class="container">
-            <div class="row">
-                <div class="span12">
-                    <nav id="social">
-                        <ul>
-                            <li><a href="https://twitter.com/furkankykc"
-                                   title="Follow Me on Twitter" target="_blank"><span
-                                    class="font-icon-social-twitter"></span></a></li>
-                            <li><a href="https://www.facebook.com/furkankykc"
-                                   title="Follow Me on Facebook" target="_blank"><span
-                                    class="font-icon-social-facebook"></span></a></li>
-                            <li><a href="https://plus.google.com/+FurkanKıyıkçı"
-                                   title="Follow Me on Google Plus"
-                                   target="_blank"><span
-                                    class="font-icon-social-google-plus"></span></a></li>
-                            <li><a href="http://www.linkedin.com/in/furkankykc"
-                                   title="Follow Me on LinkedIn" target="_blank"><span
-                                    class="font-icon-social-linkedin"></span></a></li>
-                        </ul>
-                    </nav>
-                </div>
+<!-- Socialize -->
+<div id="social-area" class="page">
+    <div class="container">
+        <div class="row">
+            <div class="span12">
+                <nav id="social">
+                    <ul>
+                        <li><a href="https://twitter.com/furkankykc"
+                               title="Follow Me on Twitter" target="_blank"><span
+                                class="font-icon-social-twitter"></span></a></li>
+                        <li><a href="https://www.facebook.com/furkankykc"
+                               title="Follow Me on Facebook" target="_blank"><span
+                                class="font-icon-social-facebook"></span></a></li>
+                        <li><a href="https://plus.google.com/+FurkanKıyıkçı"
+                               title="Follow Me on Google Plus"
+                               target="_blank"><span
+                                class="font-icon-social-google-plus"></span></a></li>
+                        <li><a href="http://www.linkedin.com/in/furkankykc"
+                               title="Follow Me on LinkedIn" target="_blank"><span
+                                class="font-icon-social-linkedin"></span></a></li>
+                    </ul>
+                </nav>
             </div>
         </div>
     </div>
-    <!-- End Socialize -->
+</div>
+<!-- End Socialize -->
 
-    <!-- Footer -->
-    <footer>
-        <p class="credits">&copy;2013 Brushed. <a href="http://themes.alessioatzeni.com/html/brushed/"
-                                                  title="Brushed | Responsive One Page Template">Brushed Template</a> by
-            <a href="http://www.alessioatzeni.com/" title="Alessio Atzeni | Web Designer &amp; Front-end Developer">Alessio
-                Atzeni</a></p>
-    </footer>
-    <!-- End Footer -->
+<!-- Footer -->
+<footer>
+{#    <p class="credits">&copy;2013 Brushed. <a href="http://themes.alessioatzeni.com/html/brushed/"#}
+{#                                              title="Brushed | Responsive One Page Template">Brushed Template</a> by#}
+{#        <a href="http://www.alessioatzeni.com/" title="Alessio Atzeni | Web Designer &amp; Front-end Developer">Alessio#}
+{#            Atzeni</a></p>#}
+</footer>
+<!-- End Footer -->
 
-    <!-- Back To Top -->
-    <a id="back-to-top" href="#">
-        <i class="font-icon-arrow-simple-up"></i>
-    </a>
-    <!-- End Back to Top -->
-    <!-- Js -->
-    {#<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.13.0/jquery.min.js"></script> <!-- jQuery Core -->#}
-    {#    <script src="{% static '/js/jquery-3.3.1.slim.min.js' %}"></script> <!-- Bootstrap -->#}
-    <script src="{% static '/js/bootstrap.min.js' %}"></script> <!-- Bootstrap -->
-    <script src="{% static '/js/supersized.3.2.7.min.js' %}"></script> <!-- Slider -->
-    <script src="{% static '/js/waypoints.js' %}"></script> <!-- WayPoints -->
-    <script src="{% static '/js/waypoints-sticky.js' %}"></script> <!-- Waypoints for Header -->
-    <script src="{% static '/js/jquery.isotope.js' %}"></script> <!-- Isotope Filter -->
-    <script src="{% static '/js/jquery.fancybox.pack.js' %}"></script> <!-- Fancybox -->
-    <script src="{% static '/js/jquery.fancybox-media.js' %}"></script> <!-- Fancybox for Media -->
-    <script src="{% static '/js/jquery.tweet.js' %}"></script> <!-- Tweet -->
-    <script src="{% static '/js/plugins.js' %}"></script>
-    <!-- Contains: jPreloader, jQuery Easing, jQuery ScrollTo, jQuery One Page Navi -->
-    <script src="{% static '/js/main.js' %}"></script> <!-- Default JS -->
-    <!-- End Js -->
-    <script>
-        var $root = $('html, body');
-        $('a').click(function () {
-            $('html, body').animate({
-                scrollTop: $($.attr(this, 'href')).offset().top
-            }, 500);
-            return false;
-        });
+<!-- Back To Top -->
+<a id="back-to-top" href="#">
+    <i class="font-icon-arrow-simple-up"></i>
+</a>
+<!-- End Back to Top -->
+<!-- Js -->
+{#<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.13.0/jquery.min.js"></script> <!-- jQuery Core -->#}
+{#    <script src="{% static '/js/jquery-3.3.1.slim.min.js' %}"></script> <!-- Bootstrap -->#}
+<script src="{% static '/js/bootstrap.min.js' %}"></script> <!-- Bootstrap -->
+<script src="{% static '/js/supersized.3.2.7.min.js' %}"></script> <!-- Slider -->
+<script src="{% static '/js/waypoints.js' %}"></script> <!-- WayPoints -->
+<script src="{% static '/js/waypoints-sticky.js' %}"></script> <!-- Waypoints for Header -->
+<script src="{% static '/js/jquery.isotope.js' %}"></script> <!-- Isotope Filter -->
+<script src="{% static '/js/jquery.fancybox.pack.js' %}"></script> <!-- Fancybox -->
+<script src="{% static '/js/jquery.fancybox-media.js' %}"></script> <!-- Fancybox for Media -->
+<script src="{% static '/js/jquery.tweet.js' %}"></script> <!-- Tweet -->
+<script src="{% static '/js/plugins.js' %}"></script>
+<!-- Contains: jPreloader, jQuery Easing, jQuery ScrollTo, jQuery One Page Navi -->
+<script src="{% static '/js/main.js' %}"></script> <!-- Default JS -->
+<!-- End Js -->
+<script>
+    var $root = $('html, body');
+    $('a').click(function () {
+        $('html, body').animate({
+            scrollTop: $($.attr(this, 'href')).offset().top
+        }, 500);
+        return false;
+    });
 
-    </script>
+</script>
 </body>
 </html>
