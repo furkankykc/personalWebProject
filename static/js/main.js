@@ -112,9 +112,9 @@ BRUSHED.nav = function(){
 ================================================== */
 
 BRUSHED.filter = function (){
-	if($('#projects').length > 0){		
-		var $container = $('#projects');
-		
+	// if($('#work').length > 0){
+	// 	var $container = $('#work');
+	//
 		$container.imagesLoaded(function() {
 			$container.isotope({
 			  // options
@@ -152,7 +152,7 @@ BRUSHED.filter = function (){
 			} else {
 			  // otherwise, apply new options
 			  $container.isotope( options );
-		}
+			}
 			
 			return false;
 		});
@@ -274,7 +274,7 @@ BRUSHED.menu = function(){
 
 BRUSHED.goSection = function(){
 	$('#nextsection').on('click', function(){
-		$target = $($(this).attr('href')).offset().top;
+		$target = $($(this).attr('href')).offset().top-30;
 		
 		$('body, html').animate({scrollTop : $target}, 750, 'easeOutExpo');
 		return false;

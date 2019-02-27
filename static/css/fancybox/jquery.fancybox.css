@@ -305,7 +305,7 @@
 	background: rgba(0, 0, 0, .8);
 }
 
-@media (max-width: 4800px) {
+@media (max-width: 480px) {
 	.fancybox-nav span,
 	.fancybox-nav:hover span,
 	.fancybox-close,
@@ -319,7 +319,7 @@
 	}
 }
 
-@media (max-width: 3200px) {
+@media (max-width: 320px) {
 	.fancybox-close i {
 		left: 30px;
 		top: 20px;	

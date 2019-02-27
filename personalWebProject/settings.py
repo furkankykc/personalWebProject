@@ -25,20 +25,24 @@ SECRET_KEY = '(p7dr%h$-e9h!7+g#&3bi9mzbenb@o$_v-8*w^4vq%b7=#jw!6'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['furkankykc.xyz','188.166.75.205','localhost','0.0.0.0','www.furkankykc.xyz']
+ALLOWED_HOSTS = ['furkankykc.xyz','188.166.75.205','localhost','0.0.0.0','www.furkankykc.xyz','127.0.0.1']
 
-
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+]
 # Application definition
 
 INSTALLED_APPS = [
     'django.contrib.auth',
+    'django.contrib.admin',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'indexPage.apps.IndexpageConfig',
     'github',
-    'numpy'
+    'numpy',
+    'blog'
 ]
 
 MIDDLEWARE = [
@@ -122,5 +126,7 @@ USE_TZ = True
 
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR,'/media')
+STATIC_ROOT = os.path.join(BASE_DIR, '/static/')
 
